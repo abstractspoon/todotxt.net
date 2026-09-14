@@ -194,10 +194,6 @@
       <Project>{C51DEEDA-B581-401B-870B-DBB7D10119BF}</Project>
       <Name>ColorFont</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CommonExtensions\CommonExtensions.csproj">
-      <Project>{5CE19CC1-833A-4950-B86E-CBF59FA00D6F}</Project>
-      <Name>CommonExtensions</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ToDoLib\ToDoLib.csproj">
       <Project>{07AA9CEA-4EF0-4B47-AFBD-6F74AD9C4653}</Project>
       <Name>ToDoLib</Name>

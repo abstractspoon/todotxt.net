@@ -43,17 +43,13 @@
     <Compile Include="..\Client\Properties\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="StringExtensions.cs" />
     <Compile Include="TaskException.cs" />
     <Compile Include="TaskList.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CommonExtensions\CommonExtensions.csproj">
-      <Project>{5CE19CC1-833A-4950-B86E-CBF59FA00D6F}</Project>
-      <Name>CommonExtensions</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
