@@ -21,8 +21,8 @@ namespace ToDoLib
 
         #region Properties
 
-        string _filePath = null;
-		string _preferredLineEnding = null;
+        string _filePath = string.Empty;
+		string _preferredLineEnding = string.Empty;
 		public List<Task> Tasks { get; private set; }
 
         // Task List MetaData
@@ -34,6 +34,12 @@ namespace ToDoLib
 	    #endregion
 
         #region Constructor
+
+        public TaskList(bool preserveWhitespace = false)
+        {
+            _preferredLineEnding = Environment.NewLine;
+            PreserveWhiteSpace = preserveWhitespace;
+        }
 
         public TaskList(string filePath, bool preserveWhitespace = false)
         {
@@ -118,6 +124,12 @@ namespace ToDoLib
                 UpdateTaskListMetaData();
                 RaiseModifiedEvent();
             }
+		}
+
+		public void Save(string filePath)
+		{
+			_filePath = filePath;
+			WriteAllTasksToFile();
 		}
 
 		public void Add(Task task)
